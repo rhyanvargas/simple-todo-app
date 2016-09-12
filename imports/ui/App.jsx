@@ -18,6 +18,7 @@ export default class App extends Component {
     ));
   }
 
+  // rendor method gets a description // of the HTML that this component // should display
   render() {
     return (
       <div className="container">
