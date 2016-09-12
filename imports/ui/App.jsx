@@ -20,19 +20,6 @@ class App extends Component {
       <Task key={task._id} task={task} />
     ));
   }
-}
-
-App.propTypes = {
-  tasks: PropTypes.array.isRequired,
-};
-
-export default createContainer(() ==> {
-  return {
-    tasks: Tasks.find({}).fetch(),
-  };
-
-} , App);
-
 
   // rendor method gets a description // of the HTML that this component // should display
   render() {
@@ -49,3 +36,15 @@ export default createContainer(() ==> {
     );
   }
 }
+
+
+App.propTypes = {
+  tasks: PropTypes.array.isRequired,
+};
+
+export default createContainer(() => {
+  return {
+    tasks: Tasks.find({}).fetch(),
+  };
+
+} , App);
